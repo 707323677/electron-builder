@@ -10,7 +10,8 @@ function createWindow () {
   })
 
   // and load the index.html of the app.
-  mainWindow.loadFile('./dist/index.html')
+  // mainWindow.loadFile('./dist/index.html')
+  mainWindow.loadURL("https://www.csdn.net/")
 
   // Open the DevTools.
   // mainWindow.webContents.openDevTools()

@@ -1,5 +1,6 @@
 1.该项目可用于打包vue项目；生成桌面可执行文件和安装包；目录为build
-2.直接将vue项目打包出的static等资源文件复制进dist目录；执行npm run build即可
+<!-- 2.直接将vue项目打包出的static等资源文件复制进dist目录；执行npm run build即可 -->
+2.直接加载项目对应地址，执行npm run build
 3.打包信息可自定义，修改package.json中的"build": {}部分
 4.如果出现打包成的安装包或执行文件打开是白屏的情况；可能是vue项目打包的资源有问题
     vue cli2中可能是config下的index.js的build:{} 部分的assetsPublicPath有问题；可以改成'./'试试

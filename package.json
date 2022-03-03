@@ -8,9 +8,9 @@
     "build": "electron-builder"
   },
   "build": {
-    "productName": "时光相机",
+    "productName": "CSDN",
     "appId": "com.futureface.app",
-    "copyright": "泰康",
+    "copyright": "",
     "directories": {
       "output": "build"
     },
@@ -51,7 +51,5 @@
     "electron": "^17.1.0",
     "electron-builder": "^22.14.13"
   },
-  "dependencies": {
-    
-  }
+  "dependencies": {}
 }
