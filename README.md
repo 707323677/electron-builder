@@ -1,41 +1,21 @@
-# electron-quick-start
-
-**Clone and run for a quick way to see Electron in action.**
-
-This is a minimal Electron application based on the [Quick Start Guide](https://electronjs.org/docs/latest/tutorial/quick-start) within the Electron documentation.
-
-A basic Electron application needs just these files:
-
-- `package.json` - Points to the app's main file and lists its details and dependencies.
-- `main.js` - Starts the app and creates a browser window to render HTML. This is the app's **main process**.
-- `index.html` - A web page to render. This is the app's **renderer process**.
-
-You can learn more about each of these components within the [Quick Start Guide](https://electronjs.org/docs/latest/tutorial/quick-start).
-
-## To Use
-
-To clone and run this repository you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. From your command line:
-
-```bash
-# Clone this repository
-git clone https://github.com/electron/electron-quick-start
-# Go into the repository
-cd electron-quick-start
-# Install dependencies
-npm install
-# Run the app
-npm start
-```
-
-Note: If you're using Linux Bash for Windows, [see this guide](https://www.howtogeek.com/261575/how-to-run-graphical-linux-desktop-applications-from-windows-10s-bash-shell/) or use `node` from the command prompt.
-
-## Resources for Learning Electron
-
-- [electronjs.org/docs](https://electronjs.org/docs) - all of Electron's documentation
-- [electronjs.org/community#boilerplates](https://electronjs.org/community#boilerplates) - sample starter apps created by the community
-- [electron/electron-quick-start](https://github.com/electron/electron-quick-start) - a very basic starter Electron app
-- [hokein/electron-sample-apps](https://github.com/hokein/electron-sample-apps) - small demo apps for the various Electron APIs
-
-## License
-
-[CC0 1.0 (Public Domain)](LICENSE.md)
+1.该项目可用于打包vue项目；生成桌面可执行文件和安装包；目录为build
+2.直接将vue项目打包出的static等资源文件复制进dist目录；执行npm run build即可
+3.打包信息可自定义，修改package.json中的"build": {}部分
+4.如果出现打包成的安装包或执行文件打开是白屏的情况；可能是vue项目打包的资源有问题
+    vue cli2中可能是config下的index.js的build:{} 部分的assetsPublicPath有问题；可以改成'./'试试
+    cli3之上可能是vue.config.js中的公共路径有问题。
+    正常情况下vue打包出的index.html可以直接使用（或者在服务器上可以使用）
+5.本项目由官网项目改编  
+打包前需要下载eletron：
+6.依赖安装
+    1.安装electron
+        npm install electron
+    2.安装electron-builder
+        npm install electron-builder
+    3.可能需要将
+    "dependencies": {}中的"electron-builder"，移到"devDependencies":{}中
+    4.至此，正常情况下可以正确打包了！
+7.也可以直接执行
+    npm install electron --save--dev
+    npm install electron-builder --save--dev
+    只是这样会更改package.json，在打包的时候可能会将依赖打包进去
