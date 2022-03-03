@@ -20,3 +20,4 @@
     npm install electron --save--dev
     npm install electron-builder --save--dev
     只是这样会更改package.json，在打包的时候可能会将依赖打包进去
+8.还有一种打包方式是electron-package;它只能打包成桌面运行程序，不能打包安装包；但是可以借助nsis打包成安装包
